@@ -58,8 +58,6 @@
 &trans  &kp F11  &kp F12  &out OUT_USB  &out OUT_BLE  &bt BT_NXT  &trans  &trans  &kp SINGLE_QUOTE  &mkp MB4           &kp GRAVE      &kp TILDE  &kp PIPE    &trans
 &trans  &trans   &trans   &trans        &kp DELETE    &kp TAB     &trans  &trans  &trans            &trans             &trans         &trans     &trans      &trans
             >;
-            
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
     };
 };
