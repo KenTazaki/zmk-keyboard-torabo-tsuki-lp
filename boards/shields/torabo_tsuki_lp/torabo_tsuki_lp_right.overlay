@@ -3,21 +3,11 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 &trackball_listener {
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
-};
-
-/ {
-    scroll_listener: scroll_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        layers = <3>;
-        input-processors = <
-            &zip_xy_transform INPUT_TRANSFORM_X_INVERT
-            &zip_xy_to_scroll_mapper
-            &zip_scroll_transform INPUT_TRANSFORM_X_INVERT
-            &zip_scroll_scaler 1 5
-        >;
-    };
+    input-processors = <
+        &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
+        &zip_xy_to_scroll_mapper
+    >;
+    layers = <3>;
 };
 
 &size_s_transform {
