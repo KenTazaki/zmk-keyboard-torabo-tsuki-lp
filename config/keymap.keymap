@@ -59,7 +59,7 @@
 &trans  &trans   &trans   &trans        &kp DELETE    &kp TAB     &trans  &trans  &trans            &trans             &trans         &trans     &trans      &trans
             >;
             
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN &inc_dec_kp C_AC_PAN_RIGHT C_AC_PAN_LEFT>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
     };
 };
