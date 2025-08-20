@@ -7,19 +7,6 @@
 &mt { require-prior-idle-ms = <300>; };
 
 / {
-    behaviors {
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-            tap-ms = <20>;
-        };
-        
-        scroll_left_right: behavior_sensor_rotate_mouse_wheel_left_right {
-            compatible = "zmk,behavior-sensor-rotate";
-            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
-            tap-ms = <20>;
-        };
-    };
     combos {
         compatible = "zmk,combos";
 
@@ -72,10 +59,7 @@
 &trans  &trans   &trans   &trans        &kp DELETE    &kp TAB     &trans  &trans  &trans            &trans             &trans         &trans     &trans      &trans
             >;
             
-            sensor-bindings = <
-                &scroll_left_right
-                &scroll_up_down
-            >;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN &inc_dec_kp C_AC_PAN_RIGHT C_AC_PAN_LEFT>;
         };
     };
 };
